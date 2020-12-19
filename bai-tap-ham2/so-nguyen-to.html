@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p id="abc"></p>
+
+    <script>
+        function myFunction(b) {
+            let a = true;
+            if (b < 2) {
+                a = false;
+            } else if (b == 2) {
+                a = true;
+            } else if (b % 2 == 0) {
+                a = false;
+            } else {
+                for (let i = 3; i < Math.sqrt(b); i += 2) {
+                    if (b % i == 0) {
+                        a = false
+                        break
+                    }
+                }
+            }
+            return a;
+        }
+        for (var i = 0; i < 10000; i++) {
+            if (myFunction(i)) {
+                document.getElementById('abc').innerHTML += i + ", "
+            }
+        }
+    </script>
+</body>
+
+</html>

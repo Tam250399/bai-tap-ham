@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <form>
+        <p>
+            <label>Automatic</label>
+            <input id="abc" type="number" placeholder="Feet" oninput="asdfg(this.value)" onchange="asdfg(this.value)">
+            <input id="abc" type="number" placeholder="Meter " oninput="asdfgh(this.value)" onchange="asdfgh(this.value)">
+        </p>
+        <p>Meter: <span id="out"></span></p>
+        <p>Feet: <span id="outt"></span></p>
+    </form>
+
+    <script>
+        function asdfg(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("out").innerHTML = (valNum * 0.305);
+        }
+
+        function asdfgh(valNum) {
+            valNum = parseFloat(valNum);
+            document.getElementById("outt").innerHTML = (valNum * 3.279);
+        }
+    </script>
+</body>
+
+</html>
